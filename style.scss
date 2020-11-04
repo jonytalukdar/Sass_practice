@@ -1,0 +1,124 @@
+@import 'config', 'utilities', 'buttons';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: $white-color;
+    font-family: $font-stack;
+    line-height: 1.2;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.showcase {
+    height: 100vh;
+    position: relative;
+    nav {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+
+        .logo{
+            background-color: $text-color;
+            color: $white-color;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 2rem;
+            border-radius: 57% 43% 50% 50% / 16% 30% 70% 84% ;
+            animation-name: border-radi;
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                padding: 0 12px;
+
+                a {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: $text-color;
+                    padding-bottom: .4rem;
+
+
+                    &:hover {
+                        border-bottom: 2px solid $text-color;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .showcase-content {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        h1{
+            font-size: 2.5rem;
+            line-height: 1;
+            color: rgb(250, 90, 116);
+            font-weight: 900;
+        }
+        h2{
+            color: $text-color;
+            font-weight: 700;
+        }
+        p{
+            font-size: 18px;
+            padding: .5rem 0;
+            color: #777;
+        }
+    }
+
+    img{
+        position: absolute;
+        bottom: 0%;
+    }
+
+
+}
+
+@keyframes border-radi{
+    0%{
+        border-radius: 22% 78% 23% 77% / 74% 28% 72% 26% ;
+    }
+    20%{
+        border-radius: 43% 57% 57% 43% / 23% 50% 50% 77% ;
+        background: rgb(250, 90, 116);
+    }
+    40%{
+        border-radius: 43% 57% 57% 43% / 72% 67% 33% 28% ;
+    }
+
+    60%{
+        border-radius: 43% 57% 28% 72% / 47% 67% 33% 53% ;
+        background: $secondary-color;
+    }
+    80%{
+        border-radius: 72% 28% 28% 72% / 70% 97% 3% 30% ;
+    }
+    100%{
+        border-radius: 19% 81% 70% 30% / 70% 46% 54% 30% ;
+    }
+}
